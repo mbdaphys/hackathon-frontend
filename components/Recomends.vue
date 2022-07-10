@@ -5,8 +5,8 @@
     <!-- <img :src="`/img/brands/${i.name}.svg`" alt="" />
     <img :src="`/img/brands/${i.name}.svg`" alt="" /> -->
     <div class="logo-block">
-      <div v-for="(i, id) in response" :key="id">
-        <img width="144px" height="78px" :src="`/img/brands/${i}.svg`" alt="" />
+      <div v-for="(i, id) in response"  :key="id">
+        <img width="144px" height="78px" :src="`/img/brands/${i}.svg`" @click="pushShop(i)" alt="" />
         <!-- {{ i }} -->
       </div>
     </div>
@@ -22,6 +22,11 @@ export default {
     return {
       response: {},
     };
+  },
+  methods: {
+    async pushShop(shopName) {
+      await this.$router.push("shops?=" + shopName);
+    },
   },
   async mounted() {
     try {

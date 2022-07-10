@@ -2,15 +2,11 @@
   <div class="cont">
     <Title>Горячие предложения</Title>
     <VueTinySlider id="slider" v-bind="sliderProps">
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
-      <div><img src="/img/drugs.svg" alt="" /></div>
+      <div v-for="i in 10" :key="i">
+        <nuxt-link :to="'/spheres/drugs'">
+          <img src="/img/drugs.svg" alt="" />
+        </nuxt-link>
+      </div>
     </VueTinySlider>
   </div>
 </template>

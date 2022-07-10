@@ -19,7 +19,7 @@
       </div>
     </div>
     <div v-if="switcher === 1">
-      <Title>Все для ваших питомцев</Title>
+      <!-- <Title>Все для ваших питомцев</Title> -->
       <div class="filter">
         <div
           class="filter-cont"
