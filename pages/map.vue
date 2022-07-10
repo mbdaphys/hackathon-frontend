@@ -31,13 +31,13 @@ export default {
       coords: [45.03547, 38.975313],
       markerIcon: {
         layout: "default#imageWithContent",
-        imageHref: "https://image.flaticon.com/icons/png/512/33/33447.png",
+        imageHref: "https://image.flaticon.com/img/icons/png/512/33/33447.png",
         imageSize: [43, 43],
         imageOffset: [0, 0],
         content: "123 v12",
         contentOffset: [0, 15],
         contentLayout:
-          '<img  width="20px" src="/icons/pointIcon.svg" />',
+          '<img  width="20px" src="/img/icons/pointIcon.svg" />',
       },
     };
   },

@@ -13,14 +13,14 @@
           margin-top: 10px;
         "
       >
-        <img width="250px" src="/icons/empty-cart.svg" alt="" />
+        <img width="250px" src="/img/icons/empty-cart.svg" alt="" />
         <p style="font-weight: bold; font-size: 23px">
           Простите, но мы ничего не нашли в этом магазине
         </p>
       </div>
       <div v-else v-for="(i, id) in response">
         <div class="item">
-          <img width="35px" src="/icons/purchase.svg" alt="" />
+          <img width="35px" src="/img/icons/purchase.svg" alt="" />
           <div style="text-align: right">
             <p>{{ i.cost }} ₽</p>
             <p>

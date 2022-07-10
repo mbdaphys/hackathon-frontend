@@ -27,27 +27,27 @@
           v-show="filterProps === 0"
         >
           Сортировать
-          <img width="14px" src="/icons/filter.svg" alt="" />
+          <img width="14px" src="/img/icons/filter.svg" alt="" />
         </div>
         <div
           @click="swToThirdProps()"
           class="filter-cont"
           v-show="filterProps === 1"
         >
-          По возрастанию <img src="/icons/toTop.svg" alt="" />
+          По возрастанию <img src="/img/icons/toTop.svg" alt="" />
         </div>
         <div
           @click="rebootProps()"
           class="filter-cont"
           v-show="filterProps === 2"
         >
-          По убыванию <img src="/icons/toDown.svg" alt="" />
+          По убыванию <img src="/img/icons/toDown.svg" alt="" />
         </div>
       </div>
       <div class="containers">
         <div class="container" v-for="(res, idx) in response" :key="idx">
           <div class="container-main">
-            <img width="35px" src="/icons/purchase.svg" alt="" />
+            <img width="35px" src="/img/icons/purchase.svg" alt="" />
             <p style="font-size: 12px">
               {{ res.name }}
             </p>
@@ -57,7 +57,7 @@
               {{ res.cost }}
             </p>
             <div class="container-back">
-              <img src="/icons/arrow.svg" alt="" />
+              <img src="/img/icons/arrow.svg" alt="" />
               <p>299.95 Р (5%)</p>
             </div>
           </div>

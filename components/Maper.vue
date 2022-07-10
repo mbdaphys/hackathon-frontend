@@ -8,7 +8,7 @@
         <div>
           <p>Экономь время на поиск товара</p>
         </div>
-        <img src="/icons/map.svg" alt="" />
+        <img src="/img/icons/map.svg" alt="" />
       </div>
       <div class="mapper-map">
         <img style="filter: blur(1px)" src="/img/map.svg" alt="" />

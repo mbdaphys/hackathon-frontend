@@ -3,19 +3,19 @@
     <div class="footer">
       <div class="container">
         <nuxt-link :to="'/'">
-          <img src="/icons/home.svg" width="20px" height="20px" alt="" />
+          <img src="/img/icons/home.svg" width="20px" height="20px" alt="" />
           <p>Главная</p>
         </nuxt-link>
       </div>
       <div class="container">
         <nuxt-link :to="'/search'">
-          <img src="/icons/search.svg" width="20px" height="20px" alt="" />
+          <img src="/img/icons/search.svg" width="20px" height="20px" alt="" />
           <p>Поиск</p>
         </nuxt-link>
       </div>
       <div class="container">
         <nuxt-link :to="'/spheres'">
-          <img src="/icons/sphere.svg" width="20px" height="20px" alt="" />
+          <img src="/img/icons/sphere.svg" width="20px" height="20px" alt="" />
           <p>Категории</p>
         </nuxt-link>
       </div>

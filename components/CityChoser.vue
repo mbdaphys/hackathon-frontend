@@ -3,7 +3,7 @@
     <p class="choser-text">Краснодар</p>
     <!-- <select name="" id="">
     </select> -->
-    <img src="/icons/iconDown.svg" alt="" />
+    <img src="/img/icons/iconDown.svg" alt="" />
   </div>
 </template>
 

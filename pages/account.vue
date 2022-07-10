@@ -31,7 +31,7 @@
             <div v-for="i in 6" class="item">
               <div class="item-cont">
                 <div class="item-logo">
-                  <img src="/icons/purchase.svg" alt="" />
+                  <img src="/img/icons/purchase.svg" alt="" />
                 </div>
                 <div>
                   <div class="item-time">10.12.2022</div>
@@ -41,7 +41,7 @@
               <div class="item-details">
                 <div class="item-price">5999 ₽</div>
                 <div class="item-back">
-                  <img src="/icons/arrow.svg" alt="" />
+                  <img src="/img/icons/arrow.svg" alt="" />
                   <p>299.95 ₽(5%)</p>
                 </div>
               </div>
@@ -58,7 +58,7 @@
             <div v-for="i in 6" class="item">
               <div class="item-cont">
                 <div class="item-logo">
-                  <img src="/icons/purchase.svg" alt="" />
+                  <img src="/img/icons/purchase.svg" alt="" />
                 </div>
                 <div>
                   <div class="item-time">10.12.2022</div>
@@ -68,7 +68,7 @@
               <div class="item-details">
                 <div class="item-price">5999 ₽</div>
                 <div class="item-back">
-                  <img src="/icons/arrow.svg" alt="" />
+                  <img src="/img/icons/arrow.svg" alt="" />
                   <p>299.95 ₽(5%)</p>
                 </div>
               </div>
@@ -85,7 +85,7 @@
             <div v-for="i in 6" class="item">
               <div class="item-cont">
                 <div class="item-logo">
-                  <img src="/icons/purchase.svg" alt="" />
+                  <img src="/img/icons/purchase.svg" alt="" />
                 </div>
                 <div>
                   <div class="item-time">10.12.2022</div>
@@ -95,7 +95,7 @@
               <div class="item-details">
                 <div class="item-price">5999 ₽</div>
                 <div class="item-back">
-                  <img src="/icons/arrow.svg" alt="" />
+                  <img src="/img/icons/arrow.svg" alt="" />
                   <p>299.95 ₽(5%)</p>
                 </div>
               </div>

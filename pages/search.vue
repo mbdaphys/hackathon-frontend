@@ -18,12 +18,12 @@
             v-for="(i, id) in inputHistory"
             :key="id"
           >
-            <img src="/icons/search.svg" alt="" />
+            <img src="/img/icons/search.svg" alt="" />
             <p>{{ i }}</p>
           </div>
         </div>
         <div @click="getItem" class="searcher-button">
-          <img src="/icons/search.svg" alt="" />
+          <img src="/img/icons/search.svg" alt="" />
         </div>
       </div>
       <div>
