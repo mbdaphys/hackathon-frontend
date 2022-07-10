@@ -5,15 +5,15 @@
       <div class="mainInfo-etc">
         <!-- <p>г. Краснодар</p> -->
         <CityChoser />
-        <p>+7 999 814 11 11</p>
+        <p>{{ $store.state.phone }}</p>
       </div>
     </div>
     <div class="cardInfo">
       <div class="cardInfo-items">
         <div class="cardInfo-reg">
-          <p>Карта Банкпро +</p>
-          <p>Реквизиты : ****4444</p>
-          <p>до 10% кешбек</p>
+          <p style="font-size: 12px">Карта Банкпро +</p>
+          <p style="font-size: 12px">****4444</p>
+          <p style="font-size: 10px">до 10% кешбек</p>
         </div>
         <div class="cardInfo-notreg">
           <p>Добавить Карту</p>
@@ -29,17 +29,17 @@
       <div class="items">
         <div v-for="i in 6" class="item">
           <div class="item-cont">
-            <div class="item-logo"><img src="/img/ava.svg" alt="" /></div>
+            <div class="item-logo"><img src="/icons/purchase.svg" alt="" /></div>
             <div>
-              <div class="item-time">102..2.2</div>
+              <div class="item-time">10.12.2022</div>
               <div class="item-name">Оплата товаров и услуг</div>
             </div>
           </div>
           <div class="item-details">
-            <div class="item-price">5999 РУБ</div>
+            <div class="item-price">5999 ₽</div>
             <div class="item-back">
               <img src="/icons/arrow.svg" alt="" />
-              <p>299.95 Р (5% )</p>
+              <p>299.95 ₽(5%)</p>
             </div>
           </div>
         </div>
@@ -82,23 +82,27 @@ export default { components: { Title, CityChoser } };
 .cardInfo-items {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 .cardInfo-reg {
   background: #a3a3a3;
   border-radius: 5px;
-  padding: 3px 10px;
+  padding: 10px;
+  max-width: 150px;
+  width: 100%;
 }
 .cardInfo-notreg {
   background: #a3a3a31a;
   border-radius: 5px;
-  padding: 3px 10px;
+  font-size: 12px;
+  padding: 10px;
+  max-width: 150px;
+  width: 100%;
 }
 .cardInfo-alert {
   padding: 8px 10px;
-  border: 1px solid;
   border-radius: 5px;
-  font-size: 14px;
-  max-width: 228px;
+  font-size: 10px;
   width: 100%;
 }
 .border-button {
@@ -146,6 +150,8 @@ export default { components: { Title, CityChoser } };
 }
 .item-price {
   font-size: 14px;
+  font-weight: bold;
+  color: #424242;
 }
 .item-back {
   display: flex;

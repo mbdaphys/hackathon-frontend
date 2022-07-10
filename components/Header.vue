@@ -13,7 +13,9 @@
         <p style="color: #225754; font-size: 14px; font-weight: bolds">
           Kashback до 50%
         </p>
-        <p style="font-size: 12px; font-weight: bold">1000 баллов</p>
+        <p style="font-size: 12px; font-weight: bold">
+          {{ pointsAmount }} баллов
+        </p>
       </div>
       <nuxt-link :to="'/account'">
         <img src="/img/ava.svg" alt="" />
@@ -23,7 +25,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      pointsAmount : this.$store.state.points
+    };
+  },
+};
 </script>
 
 <style scoped>

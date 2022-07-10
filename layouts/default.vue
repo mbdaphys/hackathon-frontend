@@ -2,7 +2,9 @@
   <div>
     <main class="main">
       <Header />
-      <nuxt />
+      <section style="height: 100%">
+        <nuxt />
+      </section>
     </main>
     <Footer />
   </div>
@@ -20,6 +22,6 @@ export default {
 <style scoped>
 .main {
   padding: 0 22px;
-  min-height: calc(100vh - 74px);
+  min-height: calc(100vh - 69.4px);
 }
 </style>

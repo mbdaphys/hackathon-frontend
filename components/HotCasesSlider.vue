@@ -43,11 +43,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 .cont {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  /* gap: 25px; */
 }
 #slider {
   display: flex;

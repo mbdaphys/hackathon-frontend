@@ -3,28 +3,21 @@
     <div class="footer">
       <div class="container">
         <nuxt-link :to="'/'">
-          <img src="/icons/home.svg" width="35px" height="35px" alt="" />
-          <!-- <p>Главная</p> -->
-        </nuxt-link>
-      </div>
-      <div class="container">
-        <!-- <p>Категории</p> -->
-
-        <nuxt-link :to="'/spheres'">
-          <img src="/icons/sphere.svg" width="35px" height="35px" alt="" />
-        </nuxt-link>
-      </div>
-      <div class="container">
-        <nuxt-link :to="'/best'">
-          <img src="/icons/star.svg" width="35px" height="35px" alt="" />
-          <!-- <p>Избраное</p> -->
+          <img src="/icons/home.svg" width="20px" height="20px" alt="" />
+          <p>Главная</p>
         </nuxt-link>
       </div>
       <div class="container">
         <nuxt-link :to="'/search'">
-          <img src="/icons/search.svg" width="35px" height="35px" alt="" />
+          <img src="/icons/search.svg" width="20px" height="20px" alt="" />
+          <p>Поиск</p>
         </nuxt-link>
-        <!-- <p>Избраное</p> -->
+      </div>
+      <div class="container">
+        <nuxt-link :to="'/spheres'">
+          <img src="/icons/sphere.svg" width="20px" height="20px" alt="" />
+          <p>Категории</p>
+        </nuxt-link>
       </div>
     </div>
   </footer>
@@ -37,17 +30,25 @@ export default {};
 <style scoped>
 footer {
   background: #6572e1;
-  padding: 8px 30px 12px;
+  padding: 12px 30px 12px;
   margin-top: 15px;
 }
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  font-size: 8px;
+}
+p {
+  color: white;
 }
 </style>

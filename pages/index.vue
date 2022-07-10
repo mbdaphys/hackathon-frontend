@@ -14,7 +14,6 @@ export default { components: { HotCasesSlider, Recomends } };
 <style scoped>
 .container{
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: column;gap: 50px;
 }
 </style>

@@ -1,10 +1,14 @@
 <template>
   <div class="cont">
-    <CityChoser />
+    <!-- <CityChoser /> -->
     <div class="blocks">
       <Title>Категории компаний</Title>
       <div class="block">
-        <img @click="pushToSphere('electronic')" src="/img/electroinc.svg" alt="" />
+        <img
+          @click="pushToSphere('electronic')"
+          src="/img/electroinc.svg"
+          alt=""
+        />
         <img @click="pushToSphere('zoo')" src="/img/zoo.svg" alt="" />
       </div>
       <div class="block">
@@ -12,12 +16,12 @@
         <img @click="pushToSphere('drugs')" src="/img/electroinc.svg" alt="" />
       </div>
       <div class="block">
-        <img @click="pushToSphere('drugs')" src="/img/electroinc.svg" alt="" />
+        <img @click="pushToSphere('fastfood')" src="/img/food.svg" alt="" />
         <img @click="pushToSphere('drugs')" src="/img/zoo.svg" alt="" />
       </div>
       <div class="block">
-        <img @click="pushToSphere('drugs')" src="/img/zoo.svg" alt="" />
-        <img @click="pushToSphere('drugs')" src="/img/electroinc.svg" alt="" />
+        <img @click="pushToSphere('clothes')" src="/img/clothes.svg" alt="" />
+        <img @click="pushToSphere('things')" src="/img/things.svg" alt="" />
       </div>
     </div>
     <HotCasesSlider />
@@ -38,13 +42,13 @@ export default {
   methods: {
     async pushToSphere(sphereName) {
       // console.log(sphereName);
-      await this.$router.push( 'spheres/' + sphereName);
+      await this.$router.push("spheres/" + sphereName);
     },
   },
 };
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 .cont {
   display: flex;
   flex-direction: column;
@@ -61,6 +65,7 @@ export default {
   /* border-radius: 8px; */
   display: flex;
   justify-content: space-between;
+  
   /* gap: 8px; */
   width: 100%;
 }
