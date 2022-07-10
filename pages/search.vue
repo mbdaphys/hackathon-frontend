@@ -1,7 +1,13 @@
 <template>
-  <div style="display: flex; justify-content:space-between; flex-direction:column">
+  <div
+    style="
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    "
+  >
     <div>
-      <div class="searcher">
+      <div @mouseleave="history = false" class="searcher">
         <input
           v-model="inputValue"
           placeholder="Поиск..."
@@ -9,13 +15,13 @@
           type="text"
           @keyup.enter="getItem"
           @click="history = true"
-          @mouseleave="history = false"
         />
         <div class="search-history" :style="history ? '' : 'display:none'">
           <div
             class="search-history-item"
             v-if="history"
             v-for="(i, id) in inputHistory"
+            @click=""
             :key="id"
           >
             <img src="/img/icons/search.svg" alt="" />
@@ -49,31 +55,32 @@ import axios from "axios";
 import { mapActions } from "vuex";
 import HotCasesSlider from "../components/HotCasesSlider.vue";
 export default {
-    data() {
-        return {
-            response: {},
-            inputValue: "",
-            inputHistory: [],
-            history: false,
-        };
+  data() {
+    return {
+      response: {},
+      inputValue: "",
+      inputHistory: [],
+      history: false,
+    };
+  },
+  methods: {
+    ...mapActions(["set_input_history"]),
+    async getItem() {
+      try {
+        let res = await axios.get(
+          `http://5.23.55.230:8080/get_tovar_by_name?name=${this.inputValue}`
+        );
+        this.response = JSON.parse(JSON.stringify(res.data.result));
+        console.log(this.response);
+        this.inputHistory.push(this.inputValue);
+        this.history = false;
+        // this.set_input_history(this.inputValue);
+      } catch (error) {
+        console.log(error);
+      }
     },
-    methods: {
-        ...mapActions(["set_input_history"]),
-        async getItem() {
-            try {
-                let res = await axios.get(`http://5.23.55.230:8080/get_tovar_by_name?name=${this.inputValue}`);
-                this.response = JSON.parse(JSON.stringify(res.data.result));
-                console.log(this.response);
-                this.inputHistory.push(this.inputValue);
-                this.history = false;
-                // this.set_input_history(this.inputValue);
-            }
-            catch (error) {
-                console.log(error);
-            }
-        },
-    },
-    components: { HotCasesSlider }
+  },
+  components: { HotCasesSlider },
 };
 </script>
 
@@ -107,7 +114,7 @@ export default {
   z-index: 1;
   background: #6572e1;
   padding: 10px 5px 30px 0px;
-  gap: 20px;
+  gap: 10px;
   max-width: 250px;
   width: 100%;
   border-radius: 0px 0px 50px 50px;
@@ -115,10 +122,13 @@ export default {
 .search-history-item {
   display: flex;
   gap: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
   align-items: center;
-  border-bottom: 1px solid;
-  padding: 0px 10px;
+  max-width: 100px;
+  margin-left: 0px 10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .respItem {
   margin-top: 25px;

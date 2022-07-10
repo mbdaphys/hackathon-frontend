@@ -10,11 +10,11 @@
     </div>
     <div class="header__right">
       <div>
-        <p style="color: #225754; font-size: 14px; font-weight: bolds">
+        <!-- <p style="color: #225754; font-size: 14px; font-weight: bolds">
           Kashback до 50%
-        </p>
-        <p style="font-size: 12px; font-weight: bold">
-          {{ pointsAmount }} баллов
+        </p> -->
+        <p style="font-size: 16px; font-weight: bold; display: flex; align-items: center; gap: 3px;">
+          {{ pointsAmount }}  <img width="20px" src="/img/icons/coins.svg" alt="">
         </p>
       </div>
       <nuxt-link :to="'/account'">
@@ -49,6 +49,7 @@ header {
 }
 .header__right {
   display: flex;
+  /* flex-direction: column-reverse; */
   gap: 5px;
   align-items: center;
   text-align: right;
