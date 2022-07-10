@@ -21,7 +21,8 @@ export default {
   plugins: [
     { src: "~/plugins/TinySlider", mode: "client" },
     { src: "~/plugins/ymapPlugin", mode: "client" },
-    "~plugins/eventBus.js"
+    "~plugins/eventBus.js",
+    "~plugins/accordion.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

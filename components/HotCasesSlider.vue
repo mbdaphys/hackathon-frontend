@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 .cont {
   display: flex;
   flex-direction: column;

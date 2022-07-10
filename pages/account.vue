@@ -13,7 +13,6 @@
         <div class="cardInfo-reg">
           <p style="font-size: 12px">Карта Банкпро +</p>
           <p style="font-size: 12px">****4444</p>
-          <p style="font-size: 10px">до 10% кешбек</p>
         </div>
         <div class="cardInfo-notreg">
           <p>Добавить Карту</p>
@@ -24,34 +23,96 @@
         <p>Кешбек начисляется моментально доступен для вывода на карту</p>
       </div>
     </div>
-    <div class="detailsInfo">
-      <Title>Мои транзакции</Title>
-      <div class="items">
-        <div v-for="i in 6" class="item">
-          <div class="item-cont">
-            <div class="item-logo"><img src="/icons/purchase.svg" alt="" /></div>
-            <div>
-              <div class="item-time">10.12.2022</div>
-              <div class="item-name">Оплата товаров и услуг</div>
+    <vsa-list>
+      <vsa-item>
+        <vsa-heading> Мои транзакции </vsa-heading>
+        <vsa-content>
+          <div class="items">
+            <div v-for="i in 6" class="item">
+              <div class="item-cont">
+                <div class="item-logo">
+                  <img src="/icons/purchase.svg" alt="" />
+                </div>
+                <div>
+                  <div class="item-time">10.12.2022</div>
+                  <div class="item-name">Оплата товаров и услуг</div>
+                </div>
+              </div>
+              <div class="item-details">
+                <div class="item-price">5999 ₽</div>
+                <div class="item-back">
+                  <img src="/icons/arrow.svg" alt="" />
+                  <p>299.95 ₽(5%)</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="item-details">
-            <div class="item-price">5999 ₽</div>
-            <div class="item-back">
-              <img src="/icons/arrow.svg" alt="" />
-              <p>299.95 ₽(5%)</p>
+        </vsa-content>
+      </vsa-item>
+    </vsa-list>
+    <vsa-list>
+      <vsa-item>
+        <vsa-heading> Мои категории </vsa-heading>
+        <vsa-content>
+          <div class="items">
+            <div v-for="i in 6" class="item">
+              <div class="item-cont">
+                <div class="item-logo">
+                  <img src="/icons/purchase.svg" alt="" />
+                </div>
+                <div>
+                  <div class="item-time">10.12.2022</div>
+                  <div class="item-name">Оплата товаров и услуг</div>
+                </div>
+              </div>
+              <div class="item-details">
+                <div class="item-price">5999 ₽</div>
+                <div class="item-back">
+                  <img src="/icons/arrow.svg" alt="" />
+                  <p>299.95 ₽(5%)</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </vsa-content>
+      </vsa-item>
+    </vsa-list>
+    <vsa-list>
+      <vsa-item>
+        <vsa-heading> Мои магазины </vsa-heading>
+        <vsa-content>
+          <div class="items">
+            <div v-for="i in 6" class="item">
+              <div class="item-cont">
+                <div class="item-logo">
+                  <img src="/icons/purchase.svg" alt="" />
+                </div>
+                <div>
+                  <div class="item-time">10.12.2022</div>
+                  <div class="item-name">Оплата товаров и услуг</div>
+                </div>
+              </div>
+              <div class="item-details">
+                <div class="item-price">5999 ₽</div>
+                <div class="item-back">
+                  <img src="/icons/arrow.svg" alt="" />
+                  <p>299.95 ₽(5%)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </vsa-content>
+      </vsa-item>
+    </vsa-list>
+    <HotCasesSlider />
   </div>
 </template>
 
 <script>
 import Title from "../components/Title.vue";
 import CityChoser from "../components/CityChoser.vue";
-export default { components: { Title, CityChoser } };
+import HotCasesSlider from "../components/HotCasesSlider.vue";
+export default { components: { Title, CityChoser, HotCasesSlider } };
 </script>
 
 <style scoped>
@@ -65,8 +126,6 @@ export default { components: { Title, CityChoser } };
   flex-direction: column;
   gap: 10px;
 }
-.mainInfo-name {
-}
 .mainInfo-etc {
   display: flex;
   flex-direction: row;
@@ -77,15 +136,17 @@ export default { components: { Title, CityChoser } };
   display: flex;
   /* align-items: centers; */
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
 }
 .cardInfo-items {
   display: flex;
   gap: 10px;
+
   justify-content: center;
 }
 .cardInfo-reg {
-  background: #a3a3a3;
+  background: #6572e1;
+  color: white;
   border-radius: 5px;
   padding: 10px;
   max-width: 150px;
@@ -97,6 +158,9 @@ export default { components: { Title, CityChoser } };
   font-size: 12px;
   padding: 10px;
   max-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 .cardInfo-alert {
@@ -108,7 +172,7 @@ export default { components: { Title, CityChoser } };
 .border-button {
   padding: 4px;
   border-radius: 50%;
-  background: #66686d;
+  background: #6572e1;
   width: 12px;
   height: 12px;
   text-align: center;
@@ -134,9 +198,11 @@ export default { components: { Title, CityChoser } };
 }
 .item-name {
   font-size: 14px;
+  color: black;
 }
 .item-time {
   font-size: 12px;
+  color: black;
 }
 .item-cont {
   display: flex;
@@ -144,6 +210,7 @@ export default { components: { Title, CityChoser } };
   gap: 5px;
 }
 .item-details {
+  color: black;
   display: flex;
   flex-direction: column;
   text-align: right;

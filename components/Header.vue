@@ -2,7 +2,7 @@
   <header>
     <div>
       <nuxt-link :to="'/'">
-        <div class="logo">БАНК+</div>
+        <div class="logo">КЭШ-BACK</div>
       </nuxt-link>
       <!-- <p style="padding-bottom: 6px; font-weight: 400; color: #2f8883">
         Лучшие предложения по кешбеку
@@ -44,7 +44,7 @@ header {
   /* border-bottom: 1px solid #2f888380; */
 }
 .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 }
 .header__right {
