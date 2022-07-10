@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="max-width: 400px; margin: 0 auto; background-color:white">
     <main class="main">
       <Header />
       <section style="height: 100%">
